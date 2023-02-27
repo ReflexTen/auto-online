@@ -7,17 +7,14 @@
 
 //Подключение компонентов
 
-
-
 //Подключение секций//************************
 
 //header
 @import 'header';
 
 //main
-
-
-
+@import 'section/tasks';
+@import 'section/about';
 
 //footer
 @import 'footer';

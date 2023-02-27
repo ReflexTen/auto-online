@@ -1,18 +1,17 @@
-@include('components/_head.html')
+<!DOCTYPE html>
+<html lang="ru">
+  @include('components/_head.html')
+  <body>
+    @include('components/_header.html')
 
-  @include('components/_header.html')
+    <main class="main">
+      <h1 class="sr-only">Авто онлайн</h1>
 
-  <main class="main">
-    <h1 class="sr-only">
-      
-    </h1>
+      @include('index/_tasks.html') @include('index/_about.html')
+    </main>
 
+    @include('components/_footer.html')
 
-  </main>
-
-  @include('components/_footer.html')
-
-  <script src="js/main.min.js"></script>
-</body>
-
+    <script src="js/main.min.js"></script>
+  </body>
 </html>
