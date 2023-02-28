@@ -1,14 +1,77 @@
 .about {
-  // overflow: hidden;
-  transform: translateY(-17px);
-  // .about_box
-  &_box {
-    // position: relative;
+  position: relative;
+  //
+  padding: 129px 0 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // .about__title-box
+  &__title-box {
+    padding: 0 0 58px;
+    max-width: 350px;
+    width: 100%;
+  }
+  // .about__title
+  &__title {
+  }
+  // .about__subtitle
+  &__subtitle {
+    text-align: right;
+  }
+  // .about__box
+  &__box {
+    position: relative;
     display: flex;
     justify-content: space-between;
   }
-  // .about_mission
-  &_mission {
+  // .about__info-wrapper
+  &__info-wrapper {
+    position: relative;
+    max-width: 542px;
+    width: 100%;
+  }
+  // .about__info
+  &__info {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    padding: 30px 45px 58px 27px;
+    border: 1px solid #343434;
+    border-radius: 10px;
+  }
+  // .about__info-img
+  &__info-img {
+    position: absolute;
+    top: -50px;
+    left: -90px;
+  }
+  // .about__info-box
+  &__info-box {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+  // .about__info-title
+  &__info-title {
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+  }
+  // .about__info-text
+  &__info-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  // .about__mission
+  &__mission {
     position: absolute;
     bottom: -85px;
     left: 79px;
@@ -44,98 +107,84 @@
       z-index: -1;
     }
   }
-  // .about_mission-title
-  &_mission-title {
+  // .about__mission-title
+  &__mission-title {
     font-weight: 700;
     font-size: 26px;
     line-height: 32px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
   }
-  // .about_mission-text
-  &_mission-text {
+  // .about__mission-text
+  &__mission-text {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 101%;
   }
-  // .about_video
-  &_video {
-    // position: absolute;
-    // top: -260px;
-    // right: -270px;
-    transform: translateX(200px);
-  }
-  // .about_video-img
-  &_video-img {
-  }
-  // .about_video-text
-  &_video-text {
-  }
-  // .about_video-buuton
-  &_video-buuton {
-  }
-  // .about_video-play
-  &_video-play {
-  }
-  // .about__title-box
-  &__title-box {
-    padding: 130px 0 58px;
-    max-width: 350px;
-    width: 100%;
-  }
-  // .about__title
-  &__title {
-  }
-  // .about__subtitle
-  &__subtitle {
-    text-align: right;
-  }
-  // .about__info-wrapper
-  &__info-wrapper {
-    position: relative;
-  }
-  // .about__info-img
-  &__info-img {
+  // .about__video
+  &__video {
     position: absolute;
-    top: -50px;
-    left: -90px;
+    top: 0;
+    right: 0;
+    // transform: translateX(100px);
   }
-
-  // .about__info-box
-  &__info-box {
-    &:not(:last-child) {
-      margin-bottom: 60px;
-    }
+  // .about__video-wrapper
+  &__video-wrapper {
   }
-  // .about__info
-  &__info {
-    position: relative;
-    max-width: 500px;
+  // .about__video-img
+  &__video-img {
+  }
+  // .about__video-text
+  &__video-text {
+    position: absolute;
+    bottom: 169px;
+    left: 136px;
+    max-width: 116px;
     width: 100%;
-    padding: 30px 45px 58px 27px;
-    border: 1px solid #343434;
-    border-radius: 10px;
-  }
-  // .about__info-title
-  &__info-title {
-    margin-bottom: 20px;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
-    text-transform: uppercase;
-  }
-  // .about__info-text
-  &__info-text {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    letter-spacing: 0.03em;
 
-    &:not(:last-child) {
-      margin-bottom: 15px;
+    &::before {
+      content: '';
+      background-image: url('../images/about/arrow.png');
+
+      position: absolute;
+      top: 35px;
+      right: -150px;
+      width: 161px;
+      height: 32px;
+      object-fit: contain;
     }
   }
+  // .about__video-button
+  &__video-button {
+    position: absolute;
+    bottom: 53px;
+    left: 265px;
+  }
+  // .about__video-play
+  &__video-play {
+    cursor: pointer;
+  }
+  &__video-play-img {
+    width: 100%;
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
   & .subtitle {
     margin-bottom: 0;
   }
+}
+.section {
+}
+.container {
+}
+.title {
+}
+.subtitle {
 }
