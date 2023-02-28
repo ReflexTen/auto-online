@@ -6,8 +6,13 @@
 
     <main class="main">
       <h1 class="sr-only">Авто онлайн</h1>
-
-      @include('index/_tasks.html') @include('index/_about.html')
+      @include('index/_tasks.html')
+      <div
+        class="wrapper"
+        style="background-image: url('../../images/bg/all-bg.png')"
+      >
+        @include('index/_about.html') @include('index/_advantages.html')
+      </div>
     </main>
 
     @include('components/_footer.html')

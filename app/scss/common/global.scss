@@ -46,7 +46,10 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+.wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .container {
   max-width: 1190px;
   width: 100%;
