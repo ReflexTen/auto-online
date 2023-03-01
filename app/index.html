@@ -91,10 +91,11 @@
 
     <main class="main">
       <h1 class="sr-only">Авто онлайн</h1>
-      <section
-  class="tasks section"
-  style="background-image: url('../../images/bg/tasks.png')"
->
+      <div
+        class="wrapper"
+        style="background-image: url('../../images/bg/all-bg.png')"
+      >
+        <section class="tasks section">
   <!-- <h2 class="sr-only">
     Задания
   </h2> -->
@@ -151,11 +152,8 @@
   </div>
 </section>
 
-      <div
-        class="wrapper"
-        style="background-image: url('../../images/bg/all-bg.png')"
-      >
-        <section class="about section">
+<!-- style="background-image: url('../../images/bg/tasks.png')" -->
+ <section class="about section">
   <div class="container">
     <div class="about__title-box">
       <h2 class="about__title title">Узнай о нас</h2>
@@ -229,7 +227,12 @@
 </section>
 
 <!-- style="background-image: url('../../images/bg/about-bg.png')" -->
- <section class="advantages section">
+
+        <section class="advantages section">
+  <div class="advantages__big-text">
+    <p class="advantages__text">Что ты</p>
+    <p class="advantages__text">получишь</p>
+  </div>
   <div class="container">
     <div class="advantages__title-box">
       <h2 class="advantages__title title">Что ты получишь</h2>
@@ -274,6 +277,49 @@
 </section>
 
 <!-- style="background-image: url('../../images/bg/advantages-bg.png')" -->
+ <section class="questions section">
+  <div class="container">
+    <div class="questions__title-box">
+      <h2 class="questions__title title">Остались вопросы?</h2>
+
+      <h3 class="questions__subtitle subtitle">здесь ты найдёшь ответы</h3>
+      <div class="questions__shadow"></div>
+    </div>
+
+    <ul class="questions__inner">
+      <li class="questions__item">
+        <div class="questions__item-wrapper">
+          <div class="questions__item-title">
+            А Кто может быть участником марафона?
+          </div>
+
+          <button class="questions__item-close"></button>
+        </div>
+
+        <div class="questions__item-text active">
+          <p class="questions__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+            adipisci quas iure vel voluptatum. Dolore, ullam blanditiis. Nobis,
+            voluptatem iusto. Excepturi doloremque eius quasi nihil minus
+            tenetur, delectus fuga tempore?
+          </p>
+        </div>
+      </li>
+
+      <li class="questions__item">
+        <div class="questions__item-wrapper">
+          <div class="questions__item-title">
+            А Кто может быть участником марафона?
+          </div>
+
+          <button class="questions__item-close"></button>
+        </div>
+
+        <div class="questions__item-text"></div>
+      </li>
+    </ul>
+  </div>
+</section>
 
       </div>
     </main>
