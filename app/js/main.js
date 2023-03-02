@@ -1,14 +1,26 @@
 'use strict'
 
-const buttonClose = document.querySelectorAll('.questions__item-close')
+const questionsBtn = document.querySelectorAll('.questions__item-wrapper')
 const questionsText = document.querySelectorAll('.questions__item-text')
 
-buttonClose.forEach(el => {
+questionsBtn.forEach(el => {
   el.addEventListener('click', () => {
-    const text = el.closest('.questions__item').children[1]
-    console.log(text)
-    // .children('.questions__item-text')
-    text.classList.toggle('active')
+    const selectedText = el.closest('.questions__item').children[1]
+
+    const btn = el.closest('.questions__item').children[0].children[1]
+    console.log(btn)
+
+    if (selectedText.classList.contains('active')) {
+      selectedText.classList.remove('active')
+    } else {
+      selectedText.classList.add('active')
+    }
+
+    questionsText.forEach(item => {
+      if (item !== selectedText) {
+        item.classList.remove('active')
+      }
+    })
   })
 })
 
