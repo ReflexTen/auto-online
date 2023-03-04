@@ -1,0 +1,134 @@
+.footer {
+  position: relative;
+  padding: 257px 0 25px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -325px;
+    display: block;
+    width: 100%;
+    height: 650px;
+    background-image: url('../images/decorations/clouds.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 5;
+  }
+  // .footer__title-box
+  &__title-box {
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+  // .footer__title
+  &__title {
+  }
+  // .footer__subtitle
+  &__subtitle {
+  }
+  // .footer__maraphon-start
+  &__maraphon-start {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  // .footer__timer
+  &__timer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 65px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 98px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  // .footer__hour
+  &__hour {
+  }
+  // .footer__timer-text
+  &__timer-text {
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  // .footer__minuts
+  &__minuts {
+  }
+  // .footer__seconds
+  &__seconds {
+  }
+  // .footer__buttons
+  &__buttons {
+    position: relative;
+    margin: 0 auto 130px;
+  }
+  // .footer__buttons-wrapper
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 0 auto;
+  }
+  // .footer__button-instagramm
+  &__button-instagramm {
+    margin-right: 22px;
+  }
+  // .footer__button-participate
+  &__button-participate {
+  }
+  // .footer__button
+  &__button {
+  }
+  // .footer__participation
+  &__participation {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  // .footer__info
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .footer__info-logo
+  &__info-logo {
+  }
+  // .footer__info-text
+  &__info-text {
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: 0.03em;
+  }
+  // .footer__info-politics
+  &__info-politics {
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    letter-spacing: 0.03em;
+  }
+  // .footer__info-politics-text
+  &__info-politics-text {
+  }
+  // .footer__info-politics-button
+  &__info-politics-button {
+    text-decoration: underline;
+  }
+
+  .subtitle {
+    margin-bottom: 0;
+  }
+}
