@@ -21,11 +21,11 @@ questionsBtn.forEach(el => {
   })
 })
 
-const hours = document.querySelector('.footer__hour')
-const minuts = document.querySelector('.footer__minuts')
-const seconds = document.querySelector('.footer__seconds')
+const hours = document.querySelector('.hours')
+const minuts = document.querySelector('.minuts')
+const seconds = document.querySelector('.seconds')
 
-const endDate = new Date(2023, 2, 4)
+const endDate = new Date(2023, 4, 20)
 
 function addZero(value) {
   if (String(value).length < 2) {
@@ -48,9 +48,53 @@ function getTime() {
 
   // console.log(String(diffHours).length)
 
-  hours.innerHTML = `${addZero(diffHours)} :`
-  minuts.innerHTML = ` ${addZero(diffMinuts)} :`
+  hours.innerHTML = `${addZero(diffHours)} `
+  minuts.innerHTML = ` ${addZero(diffMinuts)} `
   seconds.innerHTML = ` ${addZero(diffSeconds)}`
 }
 
 setInterval(getTime, 1000)
+
+const buttonRegistration = document.querySelectorAll('.button-participate')
+const body = document.querySelector('body')
+
+buttonRegistration.forEach(button => {
+  button.addEventListener('click', e => {
+    e.preventDefault()
+    body.classList.add('lock')
+  })
+})
+
+body.addEventListener('click', e => {
+  const target = e.target
+  if (target.classList.contains('modal')) {
+    body.classList.remove('lock')
+  }
+})
+
+const phoneInput = document.querySelector('.form__input--phone')
+
+phoneInput.addEventListener('click', maskPhone)
+
+function maskPhone() {
+  const submitBtn = document.querySelector('.form__button')
+
+  submitBtn.addEventListener('click', e => {
+    e.preventDefault()
+  })
+
+  const mask = new IMask(phoneInput, {
+    mask: '+{7}(000)000-00-00',
+    lazy: false,
+  })
+
+  phoneInput.addEventListener('input', phoneInputHandler)
+
+  function phoneInputHandler() {
+    if (mask.masked.isComplete) {
+      submitBtn.classList.add('form__button--active')
+    } else {
+      submitBtn.classList.remove('form__button--active')
+    }
+  }
+}

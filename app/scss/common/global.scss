@@ -10,28 +10,39 @@ body {
   letter-spacing: 0.03em;
   background-color: #111316;
 
-  // &::after {
-  //   content: '';
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   display: block;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: rgba(0, 0, 0, 0);
-  //   z-index: -1;
-  //   transition: background-color 0.3s;
-  // }
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(81, 81, 81, 0), rgba(81, 81, 81, 0)),
+      rgba(0, 0, 0, 0);
+    z-index: -1;
+    transition: all 0.5s;
+  }
 
-  // &.lock {
-  //   overflow: hidden;
+  &.lock {
+    overflow: hidden;
 
-  //   &::after {
-  //     background-color: rgba(0, 0, 0, 0.15);
-  //     z-index: 1;
-  //   }
+    &::after {
+      background: linear-gradient(
+          0deg,
+          rgba(81, 81, 81, 0.2),
+          rgba(81, 81, 81, 0.2)
+        ),
+        rgba(0, 0, 0, 0.8);
+      // backdrop-filter: blur(15px);
+      z-index: 998;
+    }
 
-  // }
+    & .modal {
+      z-index: 999;
+      opacity: 1;
+    }
+  }
 }
 
 .sr-only {
@@ -101,7 +112,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #515151;
-  z-index: 999;
+  z-index: 10;
   transition: all 0.5s;
 
   &::before {
