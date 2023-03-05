@@ -385,21 +385,31 @@
       </h3>
     </div>
 
-    <p class="footer__maraphon-start">
-      Дата начала марафона 20 мая / 20:00, осталось:
-    </p>
+    <div class="footer__maraphon-start">
+      Дата начала марафона
+      <span class="footer__maraphon-bold">20 мая / 20:00</span> , осталось:
+    </div>
 
     <div class="footer__timer">
-      <div class="footer__hour">
-        10 :
+      <div class="footer__timer-box">
+        <div class="footer__num hours">10</div>
+
         <div class="footer__timer-text">часов</div>
       </div>
-      <div class="footer__minuts">
-        35 :
+
+      <div class="footer__dots">:</div>
+
+      <div class="footer__timer-box">
+        <div class="footer__num minuts">30</div>
+
         <div class="footer__timer-text">минут</div>
       </div>
-      <div class="footer__seconds">
-        47
+
+      <div class="footer__dots">:</div>
+
+      <div class="footer__timer-box">
+        <div class="footer__num seconds">60</div>
+
         <div class="footer__timer-text">секунд</div>
       </div>
     </div>
@@ -435,7 +445,17 @@
         />
       </div>
 
-      <div class="footer__info-text">Made with by AutoOnline</div>
+      <div class="footer__info-text">
+        Made with
+        <span
+          ><img
+            class="footer__heart"
+            src="./images/decorations/heart.png"
+            alt="иконка сердца"
+          />
+        </span>
+        by AutoOnline
+      </div>
 
       <div class="footer__info-politics">
         <div class="footer__info-politics-text">Все права защищены</div>
@@ -447,6 +467,71 @@
     </div>
   </div>
 </footer>
+ <div class="modal">
+  <div
+    class="modal__box"
+    style="background-image: url('../../images/bg/modal-bg.png')"
+  >
+    <h4 class="modal__title">Регистрация на марафон</h4>
+
+    <h5 class="modal__subtitle">
+      Дата начала марафона
+      <span class="modal__bold"> 20 мая / 20:00</span>
+    </h5>
+
+    <div class="modal__text">
+      Укажи свои данные в полях ниже и получи доступ к
+      <span class="modal__bold">бесплатному 7-ми дневному</span>
+      марафону от Autoonline
+    </div>
+
+    <form class="modal__form form">
+      <label class="form__label" for="name">Ваше имя</label>
+      <input
+        class="form__input"
+        name="name"
+        id="name"
+        type="text"
+        placeholder="Введите ваше имя..."
+        required
+      />
+
+      <label class="form__label" for="city">Откуда вы?</label>
+      <input
+        class="form__input"
+        name="city"
+        id="city"
+        type="text"
+        placeholder="Введите город..."
+        required
+      />
+
+      <label class="form__label" for="phone">Ваш телефон</label>
+      <input
+        class="form__input form__input--phone"
+        name="phone"
+        id="phone"
+        type="tel"
+        placeholder="+79..."
+        required
+      />
+
+      <label class="form__label" for="e-mail">Ваш e-mail</label>
+      <input
+        class="form__input"
+        name="e-mail"
+        id="e-mail"
+        type="email"
+        placeholder="Введите ваше имя..."
+        required
+      />
+
+      <button class="form__button button-participate" type="submit">
+        Зарегистрироваться
+      </button>
+    </form>
+  </div>
+</div>
 
 
     <script src="js/main.min.js"></script>
