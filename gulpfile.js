@@ -50,6 +50,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
 
+    'app/js/modules/jquery.fancybox.js',
     'app/js/modules/imask.js',
     'app/js/main.js',
   ])
