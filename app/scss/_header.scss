@@ -1,9 +1,17 @@
 .header {
   position: relative;
   padding-bottom: 245px;
-  // height: 100vh;
   @extend %bg;
   z-index: 1;
+
+  @include media-3 {
+    padding-bottom: 125px;
+    background-position: right;
+  }
+
+  @include media-4 {
+    padding-bottom: 30px;
+  }
 
   &::before {
     content: '';
@@ -16,6 +24,14 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: 5;
+
+    @include media-4 {
+      bottom: -130px;
+      height: 225px;
+      // min-width: 880px;
+      background-image: url('../images/decorations/clouds-min.png');
+      background-position: -185px 5px;
+    }
   }
 
   // .header__top
@@ -24,9 +40,12 @@
 
   // .header__content
   &__content {
-    // padding-top: 180px;
     position: relative;
     z-index: 999;
+
+    @include media-3 {
+      text-align: center;
+    }
 
     &::before {
       content: '';
@@ -38,6 +57,14 @@
       background-image: url('../images/decorations/road-sign.png');
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
+
+      @include media-3 {
+        width: 100px;
+        height: 95px;
+        top: 160px;
+        right: 0px;
+      }
     }
 
     &::after {
@@ -50,7 +77,21 @@
       background-image: url('../images/decorations/sign-big.png');
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
       z-index: -1;
+
+      @include media-3 {
+        width: 150px;
+        height: 150px;
+        left: -55px;
+      }
+
+      @include media-4 {
+        width: 100px;
+        height: 100px;
+        top: -80px;
+        left: -25px;
+      }
     }
   }
 
@@ -67,6 +108,15 @@
     @include media-1 {
       font-size: 30px;
     }
+
+    @include media-2 {
+      font-size: 26px;
+    }
+
+    @include media-4 {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   // .header__subtitle
@@ -77,14 +127,36 @@
     span {
       font-weight: 700;
     }
+
+    @include media-4 {
+      max-width: 220px;
+      width: 100%;
+      margin: 0 auto 247px;
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 
   // .header__info
   &__info {
-    position: relative;
     margin-bottom: 70px;
+
     @include media-2 {
       margin-bottom: 35px;
+    }
+
+    @include media-3 {
+      margin-bottom: 25px;
+    }
+  }
+
+  // .header__info-wrapper
+  &__info-wrapper {
+    position: relative;
+    max-width: 296px;
+
+    @include media-3 {
+      margin: 0 auto;
     }
 
     &::before {
@@ -97,6 +169,20 @@
       background-image: url('../images/decorations/sign.png');
       z-index: 5;
       @extend %bg;
+
+      @include media-3 {
+        top: 23px;
+        left: 245px;
+        width: 80px;
+        height: 80px;
+      }
+
+      @include media-4 {
+        top: 0px;
+        left: 210px;
+        width: 80px;
+        height: 80px;
+      }
     }
   }
 
@@ -106,12 +192,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 296px;
     width: 100%;
     padding: 18px 32px;
     font-weight: 400;
     font-size: 13px;
     z-index: 1;
+
+    @include media-4 {
+      max-width: 203px;
+      margin: 0 auto;
+      padding: 10px 11px;
+      font-size: 10px;
+      line-height: 12px;
+    }
 
     &::before {
       content: '';
@@ -131,6 +224,11 @@
       border-radius: 3px;
       transform: skew(-10deg);
       z-index: -1;
+
+      @include media-4 {
+        max-width: 202px;
+        height: 48px;
+      }
     }
 
     &::after {
@@ -165,26 +263,38 @@
       right: 50px;
       max-width: 450px;
     }
+
+    @include media-3 {
+      display: none;
+
+      max-width: 350px;
+    }
+
+    @include media-4 {
+      display: block;
+      top: 165px;
+      right: 50%;
+      transform: translateX(50%);
+      max-width: 169px;
+    }
   }
 }
 
 .header-top {
-  // position: absolute;
-  // top: 0;
-  // left: 50%;
-  // transform: translateX(-50%);
-  // padding-right: 83px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 97px;
   z-index: 999;
-
   font-weight: 700;
   font-size: 13px;
   line-height: 16px;
   text-align: right;
   letter-spacing: 0.03em;
+
+  @include media-4 {
+    margin-bottom: 25px;
+  }
 
   // .header-top__inf
   &__inf {
@@ -225,25 +335,14 @@
     justify-content: center;
     z-index: 1;
 
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   top: -30px;
-    //   display: block;
-    //   width: 280px;
-    //   height: 114px;
-    //   background-image: url('../images/button/logo-bg.png');
-    //   @extend %bg;
-    //   z-index: -1;
-
-    //   @include media-3 {
-    //     max-width: 210px;
-    //     height: 70px;
-    //   }
-    // }
-
     @include media-3 {
       min-width: 200px;
+    }
+
+    @include media-4 {
+      min-width: 122px;
+
+      margin: 0 20px;
     }
   }
 
@@ -264,13 +363,18 @@
       font-weight: 300;
       text-align: left;
 
-      @include media-2 {
-        font-size: 9px;
+      @include media-4 {
+        font-size: 7px;
       }
     }
 
     @include media-2 {
       font-size: 12px;
+    }
+
+    @include media-4 {
+      font-size: 9px;
+      line-height: 11px;
     }
   }
 }
@@ -287,4 +391,8 @@
 .button-wrapper {
   display: flex;
   align-items: center;
+
+  @include media-3 {
+    flex-direction: column;
+  }
 }

@@ -66,6 +66,10 @@ body {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+
+  @include media-4 {
+    padding: 0 6px;
+  }
 }
 
 .logo {
@@ -115,6 +119,20 @@ body {
   z-index: 10;
   transition: all 0.5s;
 
+  @include media-3 {
+    margin-right: 0px;
+    margin-bottom: 60px;
+  }
+
+  @include media-4 {
+    max-width: 190px;
+    padding: 20px;
+    margin-bottom: 40px;
+
+    font-size: 11.6667px;
+    line-height: 14px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -126,6 +144,10 @@ body {
     background: #d9e454;
     border-radius: 8px / 30px;
     z-index: -1;
+
+    @include media-4 {
+      height: 53px;
+    }
   }
 
   &::after {
@@ -168,6 +190,10 @@ body {
 .free-participation {
   position: relative;
 
+  @include media-3 {
+    margin-left: 80px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -178,6 +204,20 @@ body {
     height: 22px;
     background-image: url('../images/decorations/arrow.svg');
     @extend %bg;
+
+    @include media-3 {
+      bottom: 34px;
+      left: -85px;
+      width: 61px;
+      height: 47px;
+      background-image: url('../images/decorations/behind-arrow.svg');
+      background-size: cover;
+    }
+
+    @include media-4 {
+      bottom: 10px;
+      left: -64px;
+    }
   }
 
   &__text {
@@ -187,6 +227,11 @@ body {
 
     span {
       font-weight: 700;
+    }
+
+    @include media-4 {
+      font-size: 12px;
+      line-height: 15px;
     }
   }
 
@@ -203,6 +248,13 @@ body {
     font-weight: 700;
     font-size: 13px;
     transform: rotate(21.56deg);
+
+    @include media-4 {
+      top: -20px;
+      right: -25px;
+      font-size: 8px;
+      line-height: 10px;
+    }
 
     &::before {
       content: '';
