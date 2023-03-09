@@ -1,8 +1,5 @@
 //----------colors---------------//
 
-
-
-
 //-------------------------//
 
 %bg {
@@ -18,9 +15,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-
-  @else {
+  } @else {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -30,10 +25,17 @@
 }
 
 //-------------------------//
-$md1:1200;
-$md2:992;
-$md3:768;
-$md4:576;
+$md0: 1300;
+$md1: 1200;
+$md2: 992;
+$md3: 768;
+$md4: 576;
+
+@mixin media-0 {
+  @media (max-width: #{$md0}px) {
+    @content;
+  }
+}
 
 @mixin media-1 {
   @media (max-width: #{$md1}px) {
@@ -63,16 +65,16 @@ $md4:576;
 
 @mixin font-face($font-family, $url, $weight) {
   @font-face {
-    font-family: "#{$font-family}";
-    src: url('../fonts/#{$url}.woff2') format("woff2");
-        //  url('../fonts/#{$url}.woff') format("woff");
+    font-family: '#{$font-family}';
+    src: url('../fonts/#{$url}.woff2') format('woff2');
+    //  url('../fonts/#{$url}.woff') format("woff");
     font-weight: #{$weight};
     font-display: swap;
     font-style: normal;
   }
 }
 
-// Использование миксина 
+// Использование миксина
 // Используем в файле, где подключаем шрифты (_fonts.scss)
 // Внимательно проверяем название файла в папке, это наш второй параметр - $url
 

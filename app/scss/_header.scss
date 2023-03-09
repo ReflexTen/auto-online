@@ -4,6 +4,10 @@
   @extend %bg;
   z-index: 1;
 
+  @include media-2 {
+    padding-bottom: 145px;
+  }
+
   @include media-3 {
     padding-bottom: 125px;
     background-position: right;
@@ -261,7 +265,8 @@
 
     @include media-2 {
       right: 50px;
-      max-width: 450px;
+      bottom: 28px;
+      max-width: 330px;
     }
 
     @include media-3 {
