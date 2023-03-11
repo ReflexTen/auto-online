@@ -4,6 +4,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  overflow: hidden;
+
   @include media-3 {
     padding-top: 100px;
   }
@@ -40,7 +42,11 @@
     width: 100%;
 
     @include media-2 {
-      padding-top: 490px;
+      padding-top: 535px;
+    }
+
+    @include media-3 {
+      padding-top: 575px;
     }
 
     @include media-4 {
@@ -205,19 +211,21 @@
   // .about__video
   &__video {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -15px;
+    right: -130px;
 
     @include media-0 {
-      top: 110px;
+      top: 140px;
     }
 
     @include media-1 {
-      top: 100px;
+      top: 150px;
+      right: -135px;
     }
 
     @include media-2 {
       right: 50%;
+      // left: 50%;
       transform: translateX(50%);
     }
 
@@ -227,15 +235,62 @@
   }
   // .about__video-wrapper
   &__video-wrapper {
+    position: relative;
+    width: 987px;
+    height: 897px;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/about/bg-laptop.png');
+      background-size: cover;
+      z-index: -1;
+
+      @include media-4 {
+        display: none;
+      }
+    }
+
+    @include media-0 {
+      width: 900px;
+      height: 800px;
+    }
+
+    @include media-0 {
+      width: 750px;
+      height: 650px;
+    }
+
+    @include media-4 {
+      width: 300px;
+      height: 200px;
+    }
   }
+
   // .about__video-img
   &__video-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: contain;
+
     @include media-0 {
-      max-width: 700px;
+      max-width: 650px;
     }
 
     @include media-1 {
       max-width: 575px;
+    }
+
+    @include media-2 {
+      left: 60%;
     }
 
     @include media-4 {
@@ -244,7 +299,12 @@
   }
   // .about__video-img-mini
   &__video-img-mini {
+    position: absolute;
+    // top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
     display: none;
+    min-width: 256px;
 
     @include media-4 {
       display: block;
@@ -253,8 +313,8 @@
   // .about__video-text
   &__video-text {
     position: absolute;
-    bottom: 169px;
-    left: 136px;
+    bottom: 165px;
+    left: 155px;
     max-width: 116px;
     width: 100%;
     font-weight: 400;
@@ -262,14 +322,23 @@
     line-height: 17px;
     letter-spacing: 0.03em;
 
-    @include media-1 {
-      bottom: 110px;
+    @include media-0 {
+      bottom: 70px;
       left: 35px;
     }
+    @include media-1 {
+      bottom: 90px;
+      left: 92px;
+    }
+
+    @include media-2 {
+      left: 164px;
+    }
+
     @include media-4 {
       font-size: 10px;
-      bottom: -40px;
-      left: 65px;
+      bottom: 0px;
+      left: 90px;
     }
 
     &::before {
@@ -295,31 +364,69 @@
   // .about__video-button
   &__video-button {
     position: absolute;
-    bottom: 53px;
-    left: 265px;
+    bottom: 175px;
+    left: 410px;
+    transition: all 0.5s;
+    z-index: 20;
 
+    &:hover {
+      transform: scale(1.3);
+    }
+
+    @include media-0 {
+      bottom: 75px;
+      left: 290px;
+    }
     @include media-1 {
-      bottom: 0px;
-      left: 135px;
+      bottom: 96px;
+      left: 290px;
+    }
+
+    @include media-2 {
+      left: 365px;
     }
 
     @include media-4 {
-      bottom: -145px;
-      left: 90px;
-      max-width: 255px;
+      bottom: -10px;
+      left: 200px;
+      max-width: 80px;
       width: 100%;
     }
   }
   // .about__video-play
   &__video-play {
+    position: relative;
     cursor: pointer;
-  }
-  &__video-play-img {
-    width: 100%;
-    transition: all 0.5s;
-    &:hover {
-      transform: scale(1.3);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 170px;
+      max-height: 170px;
+
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 199, 0, 0.5) 0%,
+        rgba(255, 199, 0, 0) 95.73%
+      );
+      mix-blend-mode: lighten;
+      filter: blur(46.5px);
+      transform: rotate(0.25deg);
     }
+
+    @include media-4 {
+      max-width: 127px;
+    }
+  }
+
+  // .about__video-play-img
+  &__video-play-img {
   }
 
   & .subtitle {

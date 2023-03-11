@@ -1,4 +1,8 @@
-// 'use strict'
+'use strict'
+
+// const container = document.querySelector('.container')
+// const about = document.querySelector('.about')
+// console.log(container.offsetWidth)
 
 // const questionsBtn = document.querySelectorAll('.questions__item-wrapper')
 // const questionsItem = document.querySelectorAll('.questions__item')
