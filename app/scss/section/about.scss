@@ -7,7 +7,7 @@
   overflow: hidden;
 
   @include media-3 {
-    padding-top: 100px;
+    padding: 100px 0 138px;
   }
 
   // .about__title-box
@@ -173,7 +173,6 @@
       max-width: 542px;
       width: 100%;
       height: 116px;
-
       background: radial-gradient(
         103.66% 103.66% at 50% 50%,
         #93d0fc 0%,
@@ -183,6 +182,10 @@
       filter: blur(24.8571px);
       border-radius: 9.94286px;
       z-index: -1;
+
+      @include media-3 {
+        height: 100px;
+      }
     }
   }
   // .about__mission-title
