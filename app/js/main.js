@@ -1,63 +1,71 @@
 'use strict'
 
-// const container = document.querySelector('.container')
-// const about = document.querySelector('.about')
-// console.log(container.offsetWidth)
+const container = document.querySelector('.container')
+const about = document.querySelector('.about')
 
-// const questionsBtn = document.querySelectorAll('.questions__item-wrapper')
-// const questionsItem = document.querySelectorAll('.questions__item')
+const questionsBtn = document.querySelectorAll('.questions__item-wrapper')
+const questionsItem = document.querySelectorAll('.questions__item')
 
-// questionsBtn.forEach(el => {
-//   el.addEventListener('click', () => {
-//     const selectedItem = el.closest('.questions__item')
+questionsBtn.forEach(el => {
+  el.addEventListener('click', () => {
+    const selectedItem = el.closest('.questions__item')
 
-//     if (selectedItem.classList.contains('active')) {
-//       selectedItem.classList.remove('active')
-//     } else {
-//       selectedItem.classList.add('active')
-//     }
+    if (selectedItem.classList.contains('active')) {
+      selectedItem.classList.remove('active')
+    } else {
+      selectedItem.classList.add('active')
+    }
 
-//     questionsItem.forEach(item => {
-//       if (item !== selectedItem) {
-//         item.classList.remove('active')
-//       }
-//     })
-//   })
-// })
+    questionsItem.forEach(item => {
+      if (item !== selectedItem) {
+        item.classList.remove('active')
+      }
+    })
+  })
+})
 
-// const hours = document.querySelector('.hours')
-// const minuts = document.querySelector('.minuts')
-// const seconds = document.querySelector('.seconds')
+const hours = document.querySelector('.hours')
+const minuts = document.querySelector('.minuts')
+const seconds = document.querySelector('.seconds')
 
-// const endDate = new Date(2023, 4, 20)
+let endDate = new Date(2023, 2, 1)
+const nowDate = new Date()
+let lastDate
 
-// function addZero(value) {
-//   if (String(value).length < 2) {
-//     return `0${value}`
-//   }
+if (endDate - nowDate < 0) {
+  lastDate = Math.floor((nowDate - endDate) / 86400000)
+  endDate.setDate(endDate.getDate() + (lastDate + 1))
+}
 
-//   return value
-// }
+function addZero(value) {
+  if (String(value).length < 2) {
+    return `0${value}`
+  }
 
-// function getTime() {
-//   const currentDate = new Date()
+  return value
+}
 
-//   const diff = endDate - currentDate
+function getTime() {
+  const currentDate = new Date()
 
-//   const diffHours = Math.floor(diff / (1000 * 60 * 60))
+  const diff = endDate - currentDate
 
-//   const diffMinuts = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+  // console.log(diff)
 
-//   const diffSeconds = Math.floor((diff % (1000 * 60)) / 1000)
+  const diffHours = Math.floor(diff / (1000 * 60 * 60))
 
-//   // console.log(String(diffHours).length)
+  const diffMinuts = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
 
-//   hours.innerHTML = `${addZero(diffHours)} `
-//   minuts.innerHTML = ` ${addZero(diffMinuts)} `
-//   seconds.innerHTML = ` ${addZero(diffSeconds)}`
-// }
+  const diffSeconds = Math.floor((diff % (1000 * 60)) / 1000)
 
-// setInterval(getTime, 1000)
+  // console.log(String(diffHours).length)
+
+  hours.innerHTML = `${addZero(diffHours)} `
+  minuts.innerHTML = ` ${addZero(diffMinuts)} `
+  seconds.innerHTML = ` ${addZero(diffSeconds)}`
+}
+
+setInterval(getTime, 1000)
 
 // const buttonRegistration = document.querySelectorAll('.button-participate')
 // const body = document.querySelector('body')
