@@ -2,6 +2,10 @@
   position: relative;
   padding: 257px 0 25px;
 
+  @include media-4 {
+    padding: 99px 0 25px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -13,11 +17,24 @@
     background-repeat: no-repeat;
     background-position: center;
     z-index: 5;
+
+    @include media-4 {
+      top: -125px;
+      height: 225px;
+      // min-width: 880px;
+      background-image: url('../images/decorations/clouds-min.png');
+      background-position: -150px 5px;
+    }
   }
   // .footer__title-box
   &__title-box {
     margin: 0 auto 60px;
+    margin: 0 auto 60px;
     text-align: center;
+
+    @include media-4 {
+      margin: 0 auto 40px;
+    }
   }
   // .footer__title
   &__title {
@@ -38,6 +55,16 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
+
+    @include media-3 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include media-4 {
+      font-size: 9px;
+      line-height: 13px;
+    }
   }
 
   // .footer__maraphon-bold
@@ -58,6 +85,18 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #ffffff;
+
+    @include media-3 {
+      font-size: 60px;
+      line-height: 72px;
+    }
+
+    @include media-4 {
+      margin: 0 auto 45px;
+
+      font-size: 44.5657px;
+      line-height: 54px;
+    }
   }
 
   // .footer__timer-box
@@ -81,18 +120,63 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
+
+    @include media-4 {
+      font-size: 9.47021px;
+      line-height: 12px;
+    }
   }
 
   // .footer__dots
   &__dots {
     transform: translateY(-5px);
     margin: 0 25px;
+
+    @include media-3 {
+      margin: 0 15px;
+    }
   }
 
   // .footer__buttons
   &__buttons {
     position: relative;
+    max-width: 373px;
+    width: 100%;
     margin: 0 auto 130px;
+
+    @include media-3 {
+      margin: 0 auto 200px;
+    }
+
+    @include media-4 {
+      max-width: 223px;
+    }
+
+    & .free-participation {
+      &::before {
+        @include media-3 {
+          bottom: 18px;
+          left: 170px;
+          width: 38px;
+          height: 43px;
+          background-image: url('../images/decorations/footer-behind-arrow.svg');
+          background-size: cover;
+        }
+      }
+
+      &__old-price {
+        @include media-2 {
+          top: -33px;
+          right: -30px;
+        }
+
+        @include media-3 {
+          top: 43px;
+          right: -5px;
+          transform: rotate(-25.86deg);
+        }
+      }
+    }
   }
   // .footer__buttons-wrapper
   &__buttons-wrapper {
@@ -100,11 +184,24 @@
     justify-content: center;
     align-items: center;
     // margin: 0 auto;
+
+    @include media-3 {
+      flex-direction: row-reverse;
+    }
   }
   // .footer__button-instagramm
   &__button-instagramm {
     margin-right: 22px;
     position: relative;
+
+    @include media-3 {
+      margin-right: 0;
+    }
+
+    @include media-4 {
+      max-width: 53px;
+      margin-right: 0;
+    }
 
     &::before {
       content: '';
@@ -117,6 +214,10 @@
       box-shadow: 0px 0px 0px #d2a6ff;
       border-radius: 5px;
       transition: all 0.3s;
+
+      @include media-4 {
+        display: none;
+      }
     }
 
     &:hover {
@@ -144,6 +245,28 @@
   }
   // .footer__button-participate
   &__button-participate {
+    & .button-participate {
+      @include media-4 {
+        max-width: 145px;
+        margin-right: 90px;
+        padding: 14px 0;
+        font-size: 8.59649px;
+        line-height: 10px;
+      }
+
+      &::before {
+        @include media-4 {
+          height: 40px;
+        }
+      }
+
+      &::after {
+        @include media-4 {
+          width: 140px;
+          height: 40px;
+        }
+      }
+    }
   }
   // .footer__button
   &__button {
@@ -152,16 +275,45 @@
   &__participation {
     position: absolute;
     top: 35px;
-    right: 150px;
+    right: -230px;
+
+    @include media-2 {
+      right: -155px;
+    }
+
+    @include media-3 {
+      top: 120px;
+      right: 210px;
+    }
+
+    @include media-4 {
+      top: 93px;
+      right: 80px;
+    }
   }
   // .footer__info
   &__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-3 {
+      flex-direction: column;
+    }
+  }
+  // .footer__info-item
+  &__info-item {
+    @include media-3 {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
   }
   // .footer__info-logo
   &__info-logo {
+    @include media-4 {
+      max-width: 125px;
+    }
   }
   // .footer__info-text
   &__info-text {
@@ -172,12 +324,21 @@
     line-height: 17px;
     text-align: right;
     letter-spacing: 0.03em;
+
+    @include media-4 {
+      font-size: 10.6524px;
+      line-height: 13px;
+    }
   }
 
   // .footer__heart
   &__heart {
     transform: translateY(3px);
     display: inline;
+
+    @include media-4 {
+      max-width: 15px;
+    }
   }
   // .footer__info-politics
   &__info-politics {
@@ -188,6 +349,15 @@
     line-height: 15px;
     text-align: right;
     letter-spacing: 0.03em;
+
+    @include media-3 {
+      text-align: center;
+    }
+
+    @include media-4 {
+      font-size: 10px;
+      line-height: 12px;
+    }
   }
   // .footer__info-politics-text
   &__info-politics-text {
@@ -199,5 +369,9 @@
 
   .subtitle {
     margin-bottom: 0;
+    @include media-4 {
+      margin: 0 auto;
+      max-width: 203px;
+    }
   }
 }

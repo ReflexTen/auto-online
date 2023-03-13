@@ -254,6 +254,32 @@
 
   // .header__button-wrapper
   &__button-wrapper {
+    & .button-participate {
+      @include media-3 {
+        margin-right: 0px;
+        margin-bottom: 60px;
+      }
+
+      @include media-4 {
+        margin-bottom: 40px;
+      }
+    }
+
+    & .free-participation {
+      @include media-3 {
+        margin-left: 80px;
+      }
+      &::before {
+        @include media-3 {
+          bottom: 34px;
+          left: -85px;
+          width: 61px;
+          height: 47px;
+          background-image: url('../images/decorations/behind-arrow.svg');
+          background-size: cover;
+        }
+      }
+    }
   }
 
   // header__img
