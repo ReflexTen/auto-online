@@ -67,46 +67,46 @@ function getTime() {
 
 setInterval(getTime, 1000)
 
-// const buttonRegistration = document.querySelectorAll('.button-participate')
-// const body = document.querySelector('body')
+const buttonRegistration = document.querySelectorAll('.button-participate')
+const body = document.querySelector('body')
 
-// buttonRegistration.forEach(button => {
-//   button.addEventListener('click', e => {
-//     e.preventDefault()
-//     body.classList.add('lock')
-//   })
-// })
+buttonRegistration.forEach(button => {
+  button.addEventListener('click', e => {
+    e.preventDefault()
+    body.classList.add('lock')
+  })
+})
 
-// body.addEventListener('click', e => {
-//   const target = e.target
-//   if (target.classList.contains('modal')) {
-//     body.classList.remove('lock')
-//   }
-// })
+body.addEventListener('click', e => {
+  const target = e.target
+  if (target.classList.contains('modal')) {
+    body.classList.remove('lock')
+  }
+})
 
-// const phoneInput = document.querySelector('.form__input--phone')
+const phoneInput = document.querySelector('.form__input--phone')
 
-// phoneInput.addEventListener('click', maskPhone)
+phoneInput.addEventListener('click', maskPhone)
 
-// function maskPhone() {
-//   const submitBtn = document.querySelector('.form__button')
+function maskPhone() {
+  const submitBtn = document.querySelector('.form__button')
 
-//   submitBtn.addEventListener('click', e => {
-//     e.preventDefault()
-//   })
+  submitBtn.addEventListener('click', e => {
+    e.preventDefault()
+  })
 
-//   const mask = new IMask(phoneInput, {
-//     mask: '+{7}(000)000-00-00',
-//     lazy: false,
-//   })
+  const mask = new IMask(phoneInput, {
+    mask: '+{7}(000)000-00-00',
+    lazy: false,
+  })
 
-//   phoneInput.addEventListener('input', phoneInputHandler)
+  phoneInput.addEventListener('input', phoneInputHandler)
 
-//   function phoneInputHandler() {
-//     if (mask.masked.isComplete) {
-//       submitBtn.classList.add('form__button--active')
-//     } else {
-//       submitBtn.classList.remove('form__button--active')
-//     }
-//   }
-// }
+  function phoneInputHandler() {
+    if (mask.masked.isComplete) {
+      submitBtn.classList.add('form__button--active')
+    } else {
+      submitBtn.classList.remove('form__button--active')
+    }
+  }
+}
