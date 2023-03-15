@@ -1,0 +1,210 @@
+.advantages {
+  position: relative;
+  padding: 130px 0 206px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  @include media-4 {
+    padding: 100px 0 155px;
+  }
+  // .advantages__title-box
+  &__title-box {
+    margin-bottom: 210px;
+    text-align: center;
+
+    @include media-4 {
+      margin-bottom: 60px;
+    }
+  }
+  // .advantages__subtitle
+  &__subtitle {
+    margin-bottom: 60px;
+
+    @include media-4 {
+      margin-bottom: 30px;
+    }
+  }
+  // .advantages__dop-info
+  &__dop-info {
+    max-width: 674px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include media-4 {
+      max-width: 260px;
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+  // .advantages__info
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 90px;
+
+    @include media-3 {
+      padding: 0 50px;
+    }
+
+    @include media-4 {
+      flex-direction: column;
+    }
+  }
+  // .advantages__info-box
+  &__info-box {
+    max-width: 460px;
+    width: 100%;
+    padding: 22px 60px 34px;
+    background: #e1e1e1;
+    border-radius: 11px;
+
+    @include media-2 {
+      padding: 22px 25px 34px;
+    }
+
+    @include media-4 {
+      padding: 13px 22px 22px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+
+      @include media-4 {
+        margin-bottom: 60px;
+      }
+    }
+
+    &:first-child {
+      position: relative;
+      transform: translateY(-76px);
+      &::before {
+        content: '';
+        background-image: url('../images/advantages/cone.png');
+        position: absolute;
+        bottom: -37px;
+        left: -90px;
+        width: 145px;
+        height: 156px;
+        object-fit: cover;
+        background-size: cover;
+
+        @include media-3 {
+          left: -60px;
+          width: 113px;
+          height: 116px;
+        }
+      }
+
+      @include media-4 {
+        transform: translateY(0);
+      }
+    }
+
+    &:last-child {
+      position: relative;
+
+      &::before {
+        content: '';
+        background-image: url('../images/advantages/wheel.png');
+        position: absolute;
+        top: -62px;
+        right: -66px;
+        width: 135px;
+        height: 167px;
+        object-fit: contain;
+        background-size: cover;
+
+        @include media-3 {
+          top: -45px;
+          right: -38px;
+          width: 78px;
+          height: 100px;
+        }
+      }
+    }
+  }
+  // .advantages__info-box-title
+  &__info-box-title {
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4b4b4b;
+
+    @include media-4 {
+      margin-bottom: 15px;
+      font-size: 12.5px;
+      line-height: 15px;
+    }
+  }
+  // .advantages__info-box-text
+  &__info-box-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #4b4b4b;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include media-4 {
+        margin-bottom: 12px;
+      }
+    }
+
+    @include media-4 {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+  // .advantages__big-text
+  &__big-text {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1386px;
+    width: 100%;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 166px;
+    line-height: 183px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+
+    @include media-2 {
+      font-size: 125px;
+    }
+
+    @include media-2 {
+      line-height: 130px;
+      font-size: 100px;
+    }
+    @include media-4 {
+      max-width: 290px;
+      font-size: 35px;
+      line-height: 43px;
+    }
+  }
+
+  &__text {
+    text-align: left;
+    &:last-child {
+      text-align: right;
+    }
+  }
+}

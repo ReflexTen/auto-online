@@ -1,0 +1,163 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
+  overflow-y: auto;
+
+  @include media-4 {
+    padding: 30px;
+  }
+  // .modal__box
+  &__box {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    padding: 50px 70px 58px;
+    border-radius: 10px;
+    background-color: black;
+    background-size: cover;
+
+    @include media-3 {
+      padding: 40px 45px 50px;
+    }
+
+    @include media-4 {
+      padding: 15px 15px 35px;
+    }
+  }
+  // .modal__title
+  &__title {
+    margin-bottom: 9px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+
+    @include media-4 {
+      font-size: 16px;
+    }
+  }
+  // .modal__subtitle
+  &__subtitle {
+    margin-bottom: 30px;
+    font-family: 'Century Gothic';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    @include media-4 {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+  }
+  // .modal__text
+  &__text {
+    margin-bottom: 43px;
+    text-align: center;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #ffffff;
+
+    @include media-4 {
+      margin-bottom: 20px;
+      font-size: 11px;
+    }
+  }
+  // .modal__bold
+  &__bold {
+    font-weight: 700;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  // .form__label
+  &__label {
+    margin-bottom: 6px;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    @include media-4 {
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+  // .form__input
+  &__input {
+    width: 100%;
+    padding: 18px 16px;
+    margin-bottom: 15px;
+    background: #3d3d3d;
+    border-radius: 10px;
+    font-family: 'Century Gothic';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+
+    @include media-4 {
+      padding: 11px 9px;
+    }
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
+
+    &::placeholder {
+      font-family: 'Century Gothic';
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #7e7e7e;
+
+      @include media-4 {
+        font-size: 9px;
+      }
+    }
+  }
+
+  // .form__button
+  &__button {
+    margin: 35px auto 0;
+
+    @include media-4 {
+      margin: 25px auto 0;
+    }
+  }
+
+  .button-participate {
+    max-width: 308px;
+    width: 100%;
+
+    @include media-4 {
+      max-width: 210px;
+    }
+
+    &::before {
+      max-width: 308px;
+      width: 100%;
+    }
+  }
+}
