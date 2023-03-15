@@ -32,16 +32,10 @@
     @include media-4 {
       bottom: -130px;
       height: 225px;
-      // min-width: 880px;
       background-image: url('../images/decorations/clouds-min.png');
       background-position: -185px 5px;
     }
   }
-
-  // .header__top
-  &__top {
-  }
-
   // .header__content
   &__content {
     position: relative;
@@ -98,7 +92,6 @@
       }
     }
   }
-
   // .header__title
   &__title {
     font-size: 43px;
@@ -122,7 +115,6 @@
       line-height: 20px;
     }
   }
-
   // .header__subtitle
   &__subtitle {
     margin-bottom: 53px;
@@ -140,7 +132,6 @@
       line-height: 15px;
     }
   }
-
   // .header__info
   &__info {
     margin-bottom: 70px;
@@ -153,7 +144,6 @@
       margin-bottom: 25px;
     }
   }
-
   // .header__info-wrapper
   &__info-wrapper {
     position: relative;
@@ -189,7 +179,6 @@
       }
     }
   }
-
   // .header__info-text
   &__info-text {
     position: relative;
@@ -251,7 +240,6 @@
       z-index: -1;
     }
   }
-
   // .header__button-wrapper
   &__button-wrapper {
     & .button-participate {
@@ -281,7 +269,6 @@
       }
     }
   }
-
   // header__img
   &__img {
     position: absolute;
@@ -326,13 +313,11 @@
   @include media-4 {
     margin-bottom: 25px;
   }
-
   // .header-top__inf
   &__inf {
     max-width: 212px;
     width: 100%;
   }
-
   // .header-top__text
   &__text {
     font-weight: 700;
@@ -355,12 +340,9 @@
       display: none;
     }
   }
-
   // .header-top__logo
   &__logo {
-    // position: relative;
     min-width: 280px;
-    // width: 100%;
     margin: 0 91px;
     display: flex;
     justify-content: center;
@@ -372,17 +354,14 @@
 
     @include media-4 {
       min-width: 122px;
-
       margin: 0 20px;
     }
   }
-
   // .header-top__date
   &__date {
     max-width: 212px;
     width: 100%;
   }
-
   // .header-top__date-text
   &__date-text {
     font-weight: 700;
@@ -407,15 +386,6 @@
       font-size: 9px;
       line-height: 11px;
     }
-  }
-}
-
-.logo {
-}
-
-.img {
-  // .img__logo
-  &__logo {
   }
 }
 
