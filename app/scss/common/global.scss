@@ -34,7 +34,6 @@ body {
           rgba(81, 81, 81, 0.2)
         ),
         rgba(0, 0, 0, 0.8);
-      // backdrop-filter: blur(15px);
       z-index: 998;
     }
 
@@ -74,17 +73,10 @@ body {
 
 .logo {
   display: block;
-  // max-width: 200px;
-  // width: 100%;
-  // outline: transparent;
-  // flex: 0 0 200px;
 }
 
 .main {
   flex-grow: 1;
-}
-
-.section {
 }
 
 .title {
@@ -145,11 +137,6 @@ body {
   color: #515151;
   z-index: 10;
   transition: all 0.5s;
-
-  // @include media-3 {
-  //   margin-right: 0px;
-  //   margin-bottom: 60px;
-  // }
 
   @include media-4 {
     max-width: 190px;
