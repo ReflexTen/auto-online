@@ -11,6 +11,10 @@ const cheerio = require('gulp-cheerio')
 const replace = require('gulp-replace')
 const browserSync = require('browser-sync').create()
 
+var ghpages = require('gh-pages')
+
+ghpages.publish('dist', function (err) {})
+
 function browsersync() {
   browserSync.init({
     server: {
@@ -116,9 +120,11 @@ function build() {
   return src(
     [
       'app/**/*.html',
+      'app/favicons/*',
       '!app/html/**/*.html',
       'app/css/style.min.css',
-      'app/js/main.min.js',
+      'app/js/*.js',
+      // 'app/js/main.min.js',
       'app/fonts/*.woff',
       'app/fonts/*.woff2',
     ],
